@@ -1,3 +1,9 @@
+// built-in include guard removal
+// just in case the user has a local dependency with the same file name
+#if defined _inc_velocity
+    #undef _inc_velocity
+#endif
+// custom include-guard to ensure we don't duplicate
 #if defined _velocity_included
 	#endinput
 #endif
